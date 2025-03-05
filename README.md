@@ -75,7 +75,7 @@ e0a0f3191042   traefik:2.6              "/entrypoint.sh --pr…"   42 seconds ag
 
 After the application starts, navigate to `http://localhost:82` in your web browser or run:
 ```
-$ curl localhost:80
+$ curl localhost:82
 
           ##         .
     ## ## ##        ==
