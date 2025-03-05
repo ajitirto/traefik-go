@@ -35,9 +35,9 @@ services:
       - "traefik.http.services.go.loadbalancer.server.port=80"
 
 ```
-The compose file defines an application with two services `frontend` and `backend`.
-When deploying the application, docker compose maps port 80 of the frontend service container to the same port of the host as specified in the file.
-Make sure port 80 on the host is not already being in use.
+
+When deploying the application, docker compose maps port 82 
+Make sure port 82 on the host is not already being in use.
 
 ## Deploy with docker compose
 
@@ -69,11 +69,11 @@ Listing containers must show two containers running and the port mapping as belo
 ```
 $ docker ps
 CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS                               NAMES
-e0a0f3191042   traefik:2.6              "/entrypoint.sh --pr…"   42 seconds ago   Up 42 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   traefik-golang-frontend-1
+e0a0f3191042   traefik:2.6              "/entrypoint.sh --pr…"   42 seconds ago   Up 42 seconds   0.0.0.0:82->80/tcp, :::80->80/tcp   traefik-golang-frontend-1
 662d1506f1fd   traefik-golang_backend   "/usr/local/bin/back…"   42 seconds ago   Up 42 seconds                                       traefik-golang-backend-1
 ```
 
-After the application starts, navigate to `http://localhost:80` in your web browser or run:
+After the application starts, navigate to `http://localhost:82` in your web browser or run:
 ```
 $ curl localhost:80
 
